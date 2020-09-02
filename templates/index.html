@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/bootstrap.css')}}"
+    />
+
+    <!-- CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/style.css')}}"
+    />
+
+    <title>Covid-19 tracker</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <section class="row">
+        <div class="col-12">
+          <img
+            src="{{ url_for('static',filename='img/rec.png')}}"
+            height="90"
+            alt="App logo"
+          />
+          <h1 class="d-inline">YISON COVID-19 TRACKER</h1>
+        </div>
+      </section>
+
+      <section class="row">
+        <div class="col-12">
+          <span id="country" class="mr-3">Ghana's Stats</span>
+          &verbar;
+          <select name="" id="countries" class="ml-3 shadow">
+            <option value="">selecta country</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="row my-3">
+        <div class="col-md-3">
+          <div class="shadow rounded pl-3 py-4 bg-info text-white">
+            <span>Total Cases</span>
+            <h3 class="case" id="Total">30,000</h3>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="shadow rounded pl-3 py-4 bg-success text-white">
+            <span>Recovered</span>
+            <h3 class="case" id="Recovered">30,000</h3>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="shadow rounded pl-3 py-4 bg-danger text-white">
+            <span>Active Cases</span>
+            <h3 class="case" id="Active">30,000</h3>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="shadow rounded pl-3 py-4 bg-dark text-white">
+            <span>Deaths</span>
+            <h3 class="case" id="Deaths">30,000</h3>
+          </div>
+        </div>
+      </section>
+
+      <section class="row">
+        <div class="col-12">
+          <table class="table">
+            <thead>
+              <th>#</th>
+              <th>Country</th>
+              <th>Recovered</th>
+              <th>Confirmed</th>
+              <th>Active</th>
+              <th>Deaths</th>
+            </thead>
+            <tbody id="all countries"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer text-center">
+      <p>COPYRIGHT &copy;App Designed By Abdul Razak Mutiatu.</p>
+    </div>
+
+    <!-- JS CDN -->
+    <script src="{{url_for('static', filename='js/index.js')}}"></script>
+  </body>
+</html>
